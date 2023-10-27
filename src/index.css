@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Revalia";
+    src: url(./assets/fonts/Revalia-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Saira Medium";
+    src: url(./assets/fonts/Saira-Medium.ttf);
+}
+
+
+
+main {
+    margin-top: 126px;
+}

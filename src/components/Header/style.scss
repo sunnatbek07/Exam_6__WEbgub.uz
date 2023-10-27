@@ -1,0 +1,116 @@
+header {
+    width: 100%;
+    padding: 27px 0 40px 0;
+    position: fixed;
+    top: 0;
+    background: #FFFFFF;
+
+    & .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & .nav_logo {
+            font-family: "Revalia";
+            color: #04016C;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        &_left {
+            display: flex;
+            align-items: center;
+            column-gap: 243px;
+            font-family: "Saira Medium";
+
+            &-list {
+                display: flex;
+                column-gap: 72px;
+                color: #1B2336;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 26px;
+                text-transform: capitalize;
+            }
+
+            & button {
+                padding: 19px 54px 18px 54px;
+                border-radius: 10px;
+                background: linear-gradient(102deg, #083F9B 0%, #7F56D9 93.39%);
+                color: #FFF;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 22px;
+            }
+        }
+
+        & .bx-menu {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 1022px) {
+    header {
+        width: 100%;
+        padding: 27px 0 40px 0;
+        position: fixed;
+        top: 0;
+        background: #FFFFFF;
+
+        & .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & .nav_logo {
+                font-family: "Revalia";
+                color: #04016C;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 25px;
+                display: flex;
+                align-items: center;
+            }
+
+            &_left {
+                display: none;
+                align-items: center;
+                column-gap: 243px;
+                font-family: "Saira Medium";
+
+                &-list {
+                    display: flex;
+                    column-gap: 72px;
+                    color: #1B2336;
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 26px;
+                    text-transform: capitalize;
+                }
+
+                & button {
+                    padding: 19px 54px 18px 54px;
+                    border-radius: 10px;
+                    background: linear-gradient(102deg, #083F9B 0%, #7F56D9 93.39%);
+                    color: #FFF;
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 22px;
+                }
+            }
+
+            & .bx-menu {
+                display: block;
+                font-size: 25px;
+                color: #04016C;
+                cursor: pointer;
+            }
+        }
+    }
+}
