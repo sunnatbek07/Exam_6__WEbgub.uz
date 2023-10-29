@@ -1,0 +1,160 @@
+#courses {
+    padding: 120px 0 103px 0;
+    background: linear-gradient(180deg, #D9ECFF 0%, rgba(240, 243, 255, 0.00) 127.78%);
+    position: relative;
+
+    & .ellipse {
+        position: absolute;
+        top: 100px;
+        left: 207px;
+    }
+
+    & h2 {
+        color: #323232;
+        font-family: "Rowdies Regular";
+        font-size: 45px;
+        text-align: center;
+        font-weight: 400;
+        line-height: 70px;
+        letter-spacing: -1.35px;
+        margin-bottom: 48px;
+
+        & span {
+            color: #2AAA94;
+        }
+    }
+
+    & .course-text {
+        color: #4E596B;
+        text-align: center;
+        font-family: "Saira Regular";
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 35px;
+        max-width: 691px;
+        margin: auto;
+    }
+
+    & .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-content: space-between;
+        row-gap: 50px;
+        column-gap: 40px;
+        margin: 90px 0;
+    }
+
+    & .btn_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        & button {
+            border-radius: 10px;
+            background: linear-gradient(95deg, #083F9B 0%, #7F56D9 102.25%);
+            width: 200px;
+            // height: 60px;
+            padding: 17px 0 18px 0;
+            color: #FFF;
+            text-align: center;
+            font-family: "Saira Medium";
+            font-size: 20px;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #courses {
+        padding: 120px 0 103px 0;
+        background: linear-gradient(180deg, #D9ECFF 0%, rgba(240, 243, 255, 0.00) 127.78%);
+        position: relative;
+
+        & .wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            justify-content: space-between;
+            row-gap: 50px;
+            column-gap: 40px;
+            margin: 90px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #courses {
+        padding: 80px 0 60px 0;
+        background: linear-gradient(180deg, #D9ECFF 0%, rgba(240, 243, 255, 0.00) 127.78%);
+        position: relative;
+
+        & h2 {
+            color: #323232;
+            font-family: "Rowdies Regular";
+            font-size: 36px;
+            text-align: center;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -1.35px;
+            margin-bottom: 24px;
+
+        }
+
+        & .wrapper {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            justify-content: center;
+            row-gap: 50px;
+            column-gap: 40px;
+            margin: 40px 0;
+        }
+
+        & .btn_container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            & button {
+                border-radius: 10px;
+                background: linear-gradient(95deg, #083F9B 0%, #7F56D9 102.25%);
+                width: 180px;
+                padding: 12px 0 13px 0;
+                color: #FFF;
+                text-align: center;
+                font-family: "Saira Medium";
+                font-size: 16px;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 565px) {
+        #courses {
+            & h2 {
+                color: #323232;
+                font-family: "Rowdies Regular";
+                font-size: 36px;
+                text-align: center;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: -1.35px;
+
+                & span {
+                    color: #2AAA94;
+                }
+            }
+
+            & .course-text {
+                color: #4E596B;
+                text-align: center;
+                font-family: "Saira Regular";
+                font-size: 20px;
+                font-weight: 400;
+                line-height: normal;
+                max-width: 691px;
+                margin: auto;
+            }
+        }
+    }
+}

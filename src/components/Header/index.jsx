@@ -6,7 +6,7 @@ import './style.scss';
 const Header = () => {
   return (
     <header>
-      <div className="container mx-auto">
+      <div className="container mx-auto px-5">
         <nav className='nav'>
           <Link href='/' className='nav_logo'>
             <img src={logo} alt="logo" />

@@ -1,0 +1,147 @@
+.card {
+    max-width: 510px;
+    border-radius: 20px;
+    background: #FFF;
+    overflow: hidden;
+
+    &_body {
+        padding: 32px;
+
+        &-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & p {
+                color: #4E596B;
+                font-family: "Saira Medium";
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 35px;
+                letter-spacing: -0.42px;
+            }
+        }
+
+        & h4 {
+            color: #324361;
+            font-family: "Saira Semibold";
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 35px;
+            letter-spacing: -0.75px;
+            margin: 21px 0 33px 0;
+        }
+
+        &-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & .price {
+                color: #4E596B;
+                font-family: "Saira Semibold";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 35px;
+                letter-spacing: -0.66px;
+            }
+
+            & .bx-cart-alt {
+                color: #4E596B;
+                font-family: "Saira Semibold";
+                font-size: 24px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .card {
+        max-width: 510px;
+        border-radius: 20px;
+        background: #FFF;
+        overflow: hidden;
+        margin: 0 auto;
+
+        &_body {
+            padding: 32px;
+
+            & h4 {
+                color: #324361;
+                font-family: "Saira Semibold";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: -0.75px;
+                margin: 21px 0 33px 0;
+            }
+
+            &-bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                & .price {
+                    color: #4E596B;
+                    font-family: "Saira Semibold";
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 35px;
+                    letter-spacing: -0.66px;
+                }
+
+                & .bx-cart-alt {
+                    color: #4E596B;
+                    font-family: "Saira Semibold";
+                    font-size: 24px;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    .card {
+        max-width: 510px;
+        border-radius: 20px;
+        background: #FFF;
+        overflow: hidden;
+        margin: 0 auto;
+
+        &_body {
+            padding: 32px;
+
+            &-bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                & .price {
+                    color: #4E596B;
+                    font-family: "Saira Semibold";
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 35px;
+                    letter-spacing: -0.66px;
+                }
+
+                & .bx-cart-alt {
+                    color: #4E596B;
+                    font-family: "Saira Semibold";
+                    font-size: 20px;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

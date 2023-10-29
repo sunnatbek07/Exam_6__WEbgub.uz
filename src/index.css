@@ -12,8 +12,34 @@
     src: url(./assets/fonts/Saira-Medium.ttf);
 }
 
+@font-face {
+    font-family: "Saira Semibold";
+    src: url(./assets/fonts/Saira-SemiBold.ttf);
+}
 
+@font-face {
+    font-family: "Rowdies Regular";
+    src: url(./assets/fonts/Rowdies-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Saira Regular";
+    src: url(./assets/fonts/Saira-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
 main {
     margin-top: 126px;
+}
+
+@media only screen and (max-width: 1024px){
+    main {
+        margin-top: 96px;
+    }
 }
