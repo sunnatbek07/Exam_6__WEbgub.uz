@@ -1,0 +1,299 @@
+#learn {
+    padding: 113px 0 144px 0;
+    background: linear-gradient(72deg, rgba(8, 79, 199, 0.90) 26.49%, rgba(127, 86, 217, 0.90) 85.53%);
+    position: relative;
+
+    & .learnSvg {
+        position: absolute;
+        top: 103px;
+        left: 0;
+    }
+
+    & h2 {
+        color: #FFF;
+        font-family: "Rowdies Bold";
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 50px;
+        text-align: center;
+        margin-bottom: 29px;
+
+        & span {
+            color: #4BE5CA;
+        }
+    }
+
+    & .learn_text {
+        max-width: 728px;
+        color: #FFF;
+        text-align: center;
+        font-family: "Saira Regular";
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 35px;
+        margin: 0 auto 118px auto;
+    }
+
+    & .learn_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-card {
+            padding: 0 93px;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & h5 {
+                color: #FFF;
+                text-align: center;
+                font-family: "Rowdies Bold";
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 32.64px;
+                margin: 36px 0 29px 0;
+            }
+
+            &--text {
+                color: #FFF;
+                text-align: center;
+                font-family: "Saira Regular";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 27px;
+                max-width: 331px;
+            }
+
+            &:nth-child(2) {
+                border-left: 1px dashed #FFFFFF;
+                border-right: 1px dashed #FFFFFF;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    #learn {
+        & .learnSvg {
+            position: absolute;
+            top: 240px;
+            left: 0;
+        }
+
+        & .learn_text {
+            max-width: 728px;
+            color: #FFF;
+            text-align: center;
+            font-family: "Saira Regular";
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 35px;
+            margin: 0 auto 0 auto;
+        }
+
+        & .learn_wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            &-card {
+                padding: 93px 0;
+                width: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                & h5 {
+                    color: #FFF;
+                    text-align: center;
+                    font-family: "Rowdies Bold";
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 32.64px;
+                    margin: 36px 0 29px 0;
+                }
+
+                &--text {
+                    color: #FFF;
+                    text-align: center;
+                    font-family: "Saira Regular";
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 27px;
+                    max-width: 331px;
+                }
+
+                &:nth-child(2) {
+                    border-left: 1px dashed transparent;
+                    border-right: 1px dashed transparent;
+                    border-top: 1px dashed #FFFFFF;
+                    border-bottom: 1px dashed #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    #learn {
+        padding: 60px 0 70px 0;
+        background: linear-gradient(72deg, rgba(8, 79, 199, 0.90) 26.49%, rgba(127, 86, 217, 0.90) 85.53%);
+        position: relative;
+
+        & h2 {
+            color: #FFF;
+            font-family: "Rowdies Bold";
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-align: center;
+            margin-bottom: 29px;
+
+            & span {
+                color: #4BE5CA;
+            }
+        }
+
+        & .learn_text {
+            max-width: 728px;
+            color: #FFF;
+            text-align: center;
+            font-family: "Saira Regular";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0 auto 0 auto;
+        }
+
+        & .learn_wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            &-card {
+                padding: 53px 0;
+                width: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                & h5 {
+                    color: #FFF;
+                    text-align: center;
+                    font-family: "Rowdies Bold";
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 32.64px;
+                    margin: 36px 0 29px 0;
+                }
+
+                &--text {
+                    color: #FFF;
+                    text-align: center;
+                    font-family: "Saira Regular";
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 27px;
+                    max-width: 331px;
+                }
+
+                &:nth-child(2) {
+                    border-left: 1px dashed transparent;
+                    border-right: 1px dashed transparent;
+                    border-top: 1px dashed #FFFFFF;
+                    border-bottom: 1px dashed #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #learn {
+        & h2 {
+            color: #FFF;
+            font-family: "Rowdies Bold";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-align: center;
+            margin-bottom: 29px;
+
+            & span {
+                color: #4BE5CA;
+            }
+        }
+
+        & .learn_text {
+            max-width: 728px;
+            color: #FFF;
+            text-align: center;
+            font-family: "Saira Regular";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0 auto 0 auto;
+        }
+
+        & .learn_wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            &-card {
+                padding: 48px 0;
+                width: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                & h5 {
+                    color: #FFF;
+                    text-align: center;
+                    font-family: "Rowdies Bold";
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 32.64px;
+                    margin: 36px 0 29px 0;
+                }
+
+                &--text {
+                    color: #FFF;
+                    text-align: center;
+                    font-family: "Saira Regular";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 27px;
+                    max-width: 331px;
+                }
+
+                &:nth-child(2) {
+                    border-left: 1px dashed transparent;
+                    border-right: 1px dashed transparent;
+                    border-top: 1px dashed #FFFFFF;
+                    border-bottom: 1px dashed #FFFFFF;
+                }
+            }
+        }
+    }
+}

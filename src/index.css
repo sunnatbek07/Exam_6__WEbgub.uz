@@ -27,6 +27,11 @@
     src: url(./assets/fonts/Saira-Regular.ttf);
 }
 
+@font-face {
+    font-family: "Rowdies Bold";
+    src: url(./assets/fonts/Rowdies-Bold.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
