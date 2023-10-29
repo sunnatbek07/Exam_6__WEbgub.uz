@@ -4,6 +4,7 @@ import IntroBottom from './Intro/IntroBottom';
 import Courses from './Courses';
 import Learn from './Learn';
 import Categories from './Categories';
+import Wishes from './Wishes';
 
 const Layout = () => {
     return (
@@ -13,8 +14,9 @@ const Layout = () => {
             <Courses />
             <Learn />
             <Categories />
+            <Wishes />
         </>
     )
 }
 
-export default Layout
+export default Layout;

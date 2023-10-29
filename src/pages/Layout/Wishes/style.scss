@@ -1,0 +1,290 @@
+#wishes {
+    padding: 87px 0 40px 0;
+    position: relative;
+
+    & .polygon {
+        position: absolute;
+        right: 209px;
+        top: 40%;
+    }
+
+    & .wishes_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & .phone_img {
+            height: 756px;
+        }
+
+        & h2 {
+            color: #1D1D45;
+            font-family: "Rowdies Bold";
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 60px;
+            max-width: 775px;
+
+            & span {
+                color: #2AAA94;
+            }
+        }
+
+        & p {
+            color: #4E596B;
+            font-family: "Saira Regular";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+            margin: 52px 0 48px 0;
+            max-width: 754px;
+        }
+
+        & button {
+            padding: 16px 30px;
+            border-radius: 10px;
+            background: linear-gradient(95deg, #083F9B 0%, #7F56D9 102.25%);
+            color: #FFF;
+            font-family: "Saira Medium";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px;
+        }
+    }
+
+    & iframe {
+        border-radius: 68px;
+    }
+}
+
+@media only screen and (max-width: 1670px) {
+    #wishes {
+        padding: 87px 0 40px 0;
+        position: relative;
+
+        & .polygon {
+            position: absolute;
+            right: 100px;
+            top: 40%;
+            z-index: -1;
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    #wishes {
+        padding: 87px 0 40px 0;
+        position: relative;
+
+        & iframe {
+            border-radius: 28px;
+            height: 600px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #wishes {
+        padding: 87px 0 40px 0;
+        position: relative;
+
+        & .wishes_top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & h2 {
+                color: #1D1D45;
+                font-family: "Rowdies Bold";
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                max-width: 775px;
+
+                & span {
+                    color: #2AAA94;
+                }
+            }
+
+            & p {
+                color: #4E596B;
+                font-family: "Saira Regular";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: 52px 0 48px 0;
+                max-width: 754px;
+            }
+
+        }
+
+        & iframe {
+            border-radius: 28px;
+            height: 450px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #wishes {
+        padding: 0 0 40px 0;
+        position: relative;
+
+        & .wishes_top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            & h2 {
+                color: #1D1D45;
+                font-family: "Rowdies Bold";
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-align: center;
+                max-width: 775px;
+
+                & span {
+                    color: #2AAA94;
+                }
+            }
+
+            & p {
+                color: #4E596B;
+                font-family: "Saira Regular";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: 52px 0 48px 0;
+                max-width: 754px;
+                text-align: center;
+            }
+
+            & .btn-container {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 82px;
+
+                & button {
+                    padding: 16px 30px;
+                    border-radius: 10px;
+                    background: linear-gradient(95deg, #083F9B 0%, #7F56D9 102.25%);
+                    color: #FFF;
+                    font-family: "Saira Medium";
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 28px;
+                }
+            }
+
+        }
+
+        & iframe {
+            border-radius: 28px;
+            height: 350px;
+        }
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    #wishes {
+        padding: 0 0 40px 0;
+        position: relative;
+
+        & .polygon {
+            position: absolute;
+            right: 0;
+            top: 48%;
+            z-index: -1;
+        }
+
+        & .wishes_top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            & h2 {
+                color: #1D1D45;
+                font-family: "Rowdies Bold";
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-align: center;
+                max-width: 775px;
+
+                & span {
+                    color: #2AAA94;
+                }
+            }
+
+            & p {
+                color: #4E596B;
+                font-family: "Saira Regular";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: 32px 0 28px 0;
+                max-width: 754px;
+                text-align: center;
+            }
+
+            & .btn-container {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 42px;
+
+                & button {
+                    padding: 16px 30px;
+                    border-radius: 10px;
+                    background: linear-gradient(95deg, #083F9B 0%, #7F56D9 102.25%);
+                    color: #FFF;
+                    font-family: "Saira Medium";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 28px;
+                }
+            }
+
+        }
+
+        & iframe {
+            border-radius: 18px;
+            height: 250px;
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #wishes {
+        padding: 0 0 40px 0;
+        position: relative;
+
+        & .wishes_top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & .phone_img {
+                height: 456px;
+            }
+        }
+
+        iframe {
+            border-radius: 18px;
+            height: 200px;
+        }
+    }
+}

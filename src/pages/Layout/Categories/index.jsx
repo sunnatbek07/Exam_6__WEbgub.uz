@@ -1,6 +1,6 @@
 import React from 'react';
-import './style.scss';
 import CategoryCard from '../../../components/Ui/Categories';
+import './style.scss';
 
 const Categories = () => {
     const leng = [1, 2, 3, 4, 5, 6]
