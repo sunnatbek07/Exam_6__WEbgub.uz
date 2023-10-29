@@ -5,6 +5,7 @@ import Courses from './Courses';
 import Learn from './Learn';
 import Categories from './Categories';
 import Wishes from './Wishes';
+import Services from './Services';
 
 const Layout = () => {
     return (
@@ -15,6 +16,7 @@ const Layout = () => {
             <Learn />
             <Categories />
             <Wishes />
+            <Services />
         </>
     )
 }

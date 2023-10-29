@@ -1,0 +1,99 @@
+#services {
+    padding: 71px 0;
+    fill: linear-gradient(180deg, #DBEDFF 0%, rgba(219, 237, 255, 0.00) 100%);
+    position: relative;
+
+    & .ellipse {
+        position: absolute;
+        top: 80px;
+        left: 220px;
+    }
+
+    & h2 {
+        color: #2AAA94;
+        text-align: center;
+        font-family: "Rowdies Bold";
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 55px;
+    }
+
+    & .services_text {
+        color: #4E596B;
+        text-align: center;
+        font-family: "Inter Medium";
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 40px;
+        margin: 42px 0 24px 0;
+    }
+
+    & .services_wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 67px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #services {
+        padding: 71px 0;
+        fill: linear-gradient(180deg, #DBEDFF 0%, rgba(219, 237, 255, 0.00) 100%);
+
+        & .ellipse {
+            position: absolute;
+            top: 80px;
+            left: 60px;
+        }
+
+        & .services_wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            column-gap: 67px;
+            row-gap: 60px;
+        }
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    #services {
+        padding: 71px 0;
+        fill: linear-gradient(180deg, #DBEDFF 0%, rgba(219, 237, 255, 0.00) 100%);
+
+        & .ellipse {
+            position: absolute;
+            top: 80px;
+            left: 0;
+        }
+
+        & h2 {
+            color: #2AAA94;
+            text-align: center;
+            font-family: "Rowdies Bold";
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 55px;
+        }
+
+        & .services_text {
+            color: #4E596B;
+            text-align: center;
+            font-family: "Inter Medium";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 40px;
+            margin: 24px 0 16px 0;
+        }
+
+        & .services_wrapper {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            column-gap: 67px;
+            row-gap: 60px;
+        }
+    }
+}
