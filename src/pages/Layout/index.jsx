@@ -3,6 +3,7 @@ import Intro from './Intro'
 import IntroBottom from './Intro/IntroBottom';
 import Courses from './Courses';
 import Learn from './Learn';
+import Categories from './Categories';
 
 const Layout = () => {
     return (
@@ -11,6 +12,7 @@ const Layout = () => {
             <IntroBottom />
             <Courses />
             <Learn />
+            <Categories />
         </>
     )
 }

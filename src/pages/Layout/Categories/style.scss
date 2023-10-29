@@ -1,0 +1,133 @@
+#categories {
+    padding: 101px 0 155px 0;
+    background: linear-gradient(180deg, #D9ECFF 0%, rgba(217, 236, 255, 0.00) 100%);
+
+    & h2 {
+        color: #323232;
+        text-align: center;
+        font-family: "Rowdies Bold";
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px;
+        margin-bottom: 42px;
+
+        & span {
+            color: #2AAA94;
+        }
+    }
+
+    & .categories-text {
+        color: #4E596B;
+        text-align: center;
+        font-family: "Saira Medium";
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 27px;
+        margin-bottom: 100px;
+    }
+
+    & .wrapper {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        column-gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+
+    #categories {
+        padding: 101px 0 155px 0;
+        background: linear-gradient(180deg, #D9ECFF 0%, rgba(217, 236, 255, 0.00) 100%);
+
+        & .wrapper {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            row-gap: 30px;
+            column-gap: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    #categories {
+        padding: 101px 0 155px 0;
+        background: linear-gradient(180deg, #D9ECFF 0%, rgba(217, 236, 255, 0.00) 100%);
+
+        & .wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            row-gap: 30px;
+            column-gap: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    #categories {
+        padding: 101px 0 155px 0;
+        background: linear-gradient(180deg, #D9ECFF 0%, rgba(217, 236, 255, 0.00) 100%);
+
+        & .categories-text {
+            color: #4E596B;
+            text-align: center;
+            font-family: "Saira Medium";
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 27px;
+            margin-bottom: 80px;
+        }
+
+        & .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            row-gap: 30px;
+            column-gap: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    #categories {
+        padding: 60px 0 70px 0;
+        background: linear-gradient(180deg, #D9ECFF 0%, rgba(217, 236, 255, 0.00) 100%);
+
+        & h2 {
+            color: #323232;
+            text-align: center;
+            font-family: "Rowdies Bold";
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 24px;
+
+            & span {
+                color: #2AAA94;
+            }
+        }
+
+        & .categories-text {
+            color: #4E596B;
+            text-align: center;
+            font-family: "Saira Medium";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 27px;
+            margin-bottom: 60px;
+        }
+
+        & .wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            row-gap: 30px;
+            column-gap: 20px;
+        }
+    }
+}
