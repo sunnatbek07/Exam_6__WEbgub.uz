@@ -14,7 +14,7 @@ const Footer = () => {
       <div className='container mx-auto px-5'>
         <div className="f_wrapper">
           <div className='footer_1'>
-            <Link href='/' className='footer_logo'>
+            <Link to='/' className='footer_logo'>
               <img src={logo} alt="logo" />
               <p>EBGUB.UZ</p>
             </Link>
@@ -28,10 +28,10 @@ const Footer = () => {
             <p className='title'>Quick Links</p>
 
             <div className='f_links'>
-              <p>About</p>
-              <p>Blog</p>
-              <p>Course</p>
-              <p>Contact</p>
+              <a href='/'>About</a>
+              <a href='/'>Blog</a>
+              <a href='#courses'>Course</a>
+              <a href='/'>Contact</a>
             </div>
           </div>
 

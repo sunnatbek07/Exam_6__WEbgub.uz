@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ServicesCard from '../../../components/Ui/ServicesCard';
 import service_bg from "../../../assets/images/service_bg.svg";
+import serviceApi from '../../../service/Services';
 import './style.scss';
 
 const Services = () => {
-    const arr = [1, 2, 3]
+    const [service, setService] = useState([]);
+
+    useEffect(() => {
+        serviceApi.getAll().then((response) => {
+            console.log(response.data)
+            setService(response.data.services)
+        })
+    }, [])
     return (
         <section id='services'>
             <div className='container mx-auto px-5'>
@@ -16,8 +24,8 @@ const Services = () => {
 
                 <div className='services_wrapper'>
                     {
-                        arr.map((arr) => {
-                            return <ServicesCard key={arr} />
+                        service.map((item) => {
+                            return <ServicesCard key={item._id} state={item} />
                         })
                     }
                 </div>

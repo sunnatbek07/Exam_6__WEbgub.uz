@@ -2,7 +2,9 @@ import React from 'react'
 
 const SignUp = () => {
   return (
-    <div>index</div>
+    <div>
+      
+    </div>
   )
 }
 

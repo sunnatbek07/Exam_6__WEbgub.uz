@@ -14,9 +14,11 @@ const Intro = () => {
                         InshaaAlloh
                     </h2>
 
-                    <button className='intro_btn'>
-                        Coureses
-                    </button>
+                    <a href="#courses">
+                        <button className='intro_btn'>
+                            Coureses
+                        </button>
+                    </a>
 
                     <div className='input-container'>
                         <input type="text" placeholder='What do you want to learn today?' />

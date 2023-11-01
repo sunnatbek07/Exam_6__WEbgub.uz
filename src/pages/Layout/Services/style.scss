@@ -34,6 +34,8 @@
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         column-gap: 67px;
+        justify-content: center;
+        margin: 0 auto;
     }
 }
 

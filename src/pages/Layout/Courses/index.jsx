@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '../../../components/Ui/Card';
 import course_ellipse from '../../../assets/images/course_ellipse.svg';
-
+import coursesApi from '../../../service/Courses';
 import './style.scss';
 
 const Courses = () => {
-    const card = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        coursesApi.getAll().then((response) => {
+            console.log(response.data)
+            setData(response.data.courses);
+        })
+            .catch((error) => {
+                console.error(error);
+            });
+    }, []);
+
     return (
         <section id='courses' >
             <div className="container mx-auto px-5">
@@ -18,9 +29,9 @@ const Courses = () => {
 
                 <div className='wrapper'>
                     {
-                        card.map((el) => {
-                            return <Card key={el} />
-                        })
+                        data.map((item) => (
+                            <Card key={item._id} state={item} />
+                        ))
                     }
                 </div>
 

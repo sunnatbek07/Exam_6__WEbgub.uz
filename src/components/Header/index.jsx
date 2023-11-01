@@ -34,9 +34,11 @@ const Header = () => {
             Services
           </a>
         </p>
-        <button>
-          Join
-        </button>
+        <Link to="/signup" onClick={() => setOpen(false)}>
+          <button>
+            Join
+          </button>
+        </Link>
       </Drawer>
       <div className="container mx-auto px-5">
         <nav className='nav'>
@@ -59,9 +61,11 @@ const Header = () => {
               </li>
             </ul>
 
-            <button>
-              Join
-            </button>
+            <Link to='/signup'>
+              <button>
+                Join
+              </button>
+            </Link>
           </div>
 
           <i className='bx bx-menu' onClick={() => showDrawer()}></i>
