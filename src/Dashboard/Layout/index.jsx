@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet, NavLink, Link } from "react-router-dom";
 import { Breadcrumb, Dropdown } from "antd";
+import logo from "../../assets/images/logo.svg";
 import "./style.scss";
 
 const index = () => {
@@ -28,7 +29,10 @@ const index = () => {
   return (
     <div className="ssss">
       <header className="flex items-center justify-between w-full fixed top-0 h-[80px] px-[50px] z-50 head bg-white">
-        <Link to="/dashboard">Logo</Link>
+        <Link to="/dashboard" className="flex items-center gap-2">
+          <img src={logo} alt="Dashboard logo" />
+          <span>Ebgub.uz</span>
+        </Link>
 
 
         <div className="flex items-center gap-5 login">
@@ -56,9 +60,9 @@ const index = () => {
         <div className="sidebar fixed bg-white translate-x-[-300px] md:translate-x-[0] md:w-[250px]">
           <ul>
             <li>
-              <NavLink to="/dashboard" className="nav__link">
-                <i className="bx bxs-home text-[24px] text-[#1b2336]"></i>
-                <p>Dashboard</p>
+              <NavLink to='/dashboard/' className={"nav__link"}>
+                <i className="bx bx-home text-[24px] text-[#1b2336]"></i>
+                <p>O'quvchilar</p>
               </NavLink>
             </li>
             <li>

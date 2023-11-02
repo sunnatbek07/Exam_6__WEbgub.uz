@@ -10,17 +10,15 @@ const index = () => {
     console.log(value);
   };
 
-  const data =
-
-    stdData.map((item) => {
-      const data = {
-        fish: item.fullName,
-        telefon: item.phoneNumber,
-        kurs: item.courseId.title,
-        register: item.createdAt,
-      }
-      return data
-    })
+  const data = stdData.map((item) => {
+    const data = {
+      fish: item.fullName,
+      telefon: item.phoneNumber,
+      kurs: item.courseId.title,
+      register: item.createdAt,
+    }
+    return data
+  })
 
 
   const columns = [
