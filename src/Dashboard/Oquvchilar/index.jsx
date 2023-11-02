@@ -4,50 +4,24 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 import studentApi from "../../service/Students";
 
-
-const handleChange = (value) => {
-  console.log(value);
-};
-
-const data = [
-  {
-    key: 1,
-    number: 1,
-    fish: "Xolmat",
-    telefon: "+998900666571",
-    kurs: "Bootcamp Foundation",
-    register: "10.10.2023",
-  },
-  {
-    key: 2,
-    number: 2,
-    fish: "Teshavoy",
-    telefon: "+998200026639",
-    kurs: "Bootcamp Full Stack",
-    register: "10.10.2023",
-  },
-  {
-    key: 3,
-    number: 3,
-    fish: "Eshmat",
-    telefon: "+998930016639",
-    kurs: "Bootcamp Foundation",
-    register: "01.01.2023",
-  },
-  {
-    key: 4,
-    number: 4,
-    fish: "Abdunazar Pedofil",
-    telefon: "+998993086639",
-    kurs: "Bootcamp Frontend Online",
-    register: "10.10.2023",
-  },
-];
-
 const index = () => {
   const [stdData, setStdData] = useState([])
+  const handleChange = (value) => {
+    console.log(value);
+  };
 
-  
+  const data =
+
+    stdData.map((item) => {
+      const data = {
+        fish: item.fullName,
+        telefon: item.phoneNumber,
+        kurs: item.courseId.title,
+        register: item.createdAt,
+      }
+      return data
+    })
+
 
   const columns = [
     {
@@ -107,6 +81,7 @@ const index = () => {
       console.log(err);
     })
   }, [])
+
 
   return (
     <div className="std">

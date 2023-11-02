@@ -18,21 +18,21 @@ const index = () => {
       key: '2',
       label: (
         <Link to='/signin' onClick={() => localStorage.clear()} className="flex items-center gap-2">
-          <i class='bx bx-left-arrow-alt'></i>
+          <i className='bx bx-left-arrow-alt'></i>
           <span>Chiqish</span>
         </Link>
       ),
     },
   ];
 
-  const sidebar = document.getElementsByClassName('sidebar');
   return (
     <div className="ssss">
       <header className="flex items-center justify-between w-full fixed top-0 h-[80px] px-[50px] z-50 head bg-white">
         <Link to="/dashboard">Logo</Link>
 
+
         <div className="flex items-center gap-5 login">
-          <button className="flex items-center" onClick={('translate')}>
+          <button className="flex items-center">
             <i className="bx bx-menu text-[30px]"></i>
           </button>
           <Dropdown

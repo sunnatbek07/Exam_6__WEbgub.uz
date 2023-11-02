@@ -6,7 +6,7 @@ const headers = {
 };
 
 const coursesApi = {
-    getAll: () => api.get('/course')
+    getAll: () => api.get('/course'),
 }
 
 export default coursesApi;
