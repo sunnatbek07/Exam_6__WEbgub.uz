@@ -6,7 +6,7 @@ import "./style.scss";
 const index = () => {
   return (
     <>
-      <div className="ssss1 overflow-y-scroll">
+      <div className="ssss1">
         <div className="main__up">
           <Breadcrumb
             items={[
@@ -21,7 +21,7 @@ const index = () => {
           />
         </div>
         <div className="down1 ">
-          <div className="d-cards">
+          <div className="d-cards grid md:grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 ">
             <div className="d-card card1">
               <h3>O'quvchilar</h3>
 

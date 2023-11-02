@@ -1,51 +1,14 @@
-import React, { useState } from "react";
-import { Breadcrumb, Space, Table, Tag, Modal, Select } from "antd";
+import React, { useState, useEffect } from "react";
+import { Breadcrumb, Table, Modal, Select } from "antd";
 import { Link } from "react-router-dom";
 import "./style.scss";
+import studentApi from "../../service/Students";
 
-// const columns = [
-//   {
-//     title: "#",
-//     dataIndex: "number",
-//     key: "number",
-//   },
-//   {
-//     title: "F.I.Sh",
-//     dataIndex: "fish",
-//     key: "fish",
-//   },
-//   {
-//     title: "Telefon",
-//     dataIndex: "telefon",
-//     key: "telefon",
-//   },
-//   {
-//     title: "Kurs",
-//     dataIndex: "kurs",
-//     key: "kurs",
-//   },
-//   {
-//     title: "Ro'yxatdan o'tgan vaqt",
-//     dataIndex: "register",
-//     key: "register",
-//   },
-//   {
-//     title: "Holat",
-//     dataIndex: "holat",
-//     key: "x",
-//     render: () => <a>Active</a>,
-//   },
-//   {
-//     title: "Tahrirlash",
-//     dataIndex: "",
-//     key: "x",
-//     render: () => <a onClick={showModal}>Edit</a>,
-//   },
-// ];
 
 const handleChange = (value) => {
-  console.log(value); // { value: "lucy", key: "lucy", label: "Lucy (101)" }
+  console.log(value);
 };
+
 const data = [
   {
     key: 1,
@@ -82,6 +45,10 @@ const data = [
 ];
 
 const index = () => {
+  const [stdData, setStdData] = useState([])
+
+  
+
   const columns = [
     {
       title: "#",
@@ -131,6 +98,15 @@ const index = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+
+  useEffect(() => {
+    studentApi.getAllStudent().then((res) => {
+      console.log(res.data);
+      setStdData(res.data.students);
+    }).catch((err) => {
+      console.log(err);
+    })
+  }, [])
 
   return (
     <div className="std">

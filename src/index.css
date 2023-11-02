@@ -75,6 +75,11 @@
     background: blue;
 }
 
+.ant-btn {
+    background: blue;
+    color: #FFFFFF;
+}
+
 .modal_top {
     padding: 6px 20px;
     background: blue;
@@ -82,6 +87,14 @@
     max-width: fit-content;
     margin-bottom: 20px;
     border-radius: 6px;
+}
+
+.ant-form-item-row {
+    display: block;
+}
+
+.ant-form-item-label {
+    display: flex;
 }
 
 * {

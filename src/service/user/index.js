@@ -6,5 +6,7 @@ const headers = {
 };
 
 const userApi = {
-    login: (data) => api.post("/user/login", data)
+    login: (data) => api.post("/admin/login", data)
 }
+
+export default userApi;

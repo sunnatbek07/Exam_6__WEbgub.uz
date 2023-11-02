@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 import './style.scss';
-import Drawerr from './../Ui/Drawer/index';
-import { Button, Drawer, Space } from 'antd';
+import { Drawer, Dropdown } from 'antd';
 
 
 const Header = () => {
@@ -61,7 +60,7 @@ const Header = () => {
               </li>
             </ul>
 
-            <Link to='/signup'>
+            <Link to='/signin'>
               <button>
                 Join
               </button>

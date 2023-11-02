@@ -1,28 +1,25 @@
 .ssss1 {
-  overflow: hidden;
+  min-height: fit-content;
   .main__up {
     background: #ffffff;
-    margin: 30px 15px;
     border-radius: 5px;
     padding: 15px;
   }
   .down1 {
     display: flex;
-    align-items: self-start;
+    align-items: center;
+    height: fit-content;
     margin-top: 80px;
     gap: 30px;
     margin: 40px auto;
     width: 100%;
-    height: 80vh;
     padding: 15px;
-    .d-cards {
-      display: flex;
-      align-items: center;
-      gap: 20px;
 
-      flex-wrap: wrap;
+    .d-cards {
+      width: 100%;
+
       .d-card {
-        width: 370px;
+        max-width: 100%;
         height: 220px;
         background: #fff;
         border-radius: 15px;
