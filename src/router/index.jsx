@@ -17,6 +17,7 @@ import Xizmatlar from "../Dashboard/Xizmatlar";
 import App from "../App";
 import Error from "../pages/Error";
 import Home from './../pages/Home';
+import User from "../Dashboard/User";
 
 const router = createBrowserRouter([
     {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
                 path: "/dashboard/xizmatlar",
                 element: <Xizmatlar />,
             },
+            {
+                path: "/dashboard/user",
+                element: <User />
+            }
             // {
             //     path:"/student/:id",
             // },

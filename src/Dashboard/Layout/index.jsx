@@ -9,7 +9,7 @@ const index = () => {
     {
       key: '1',
       label: (
-        <Link to='/sozlamalar' className="flex items-center gap-2">
+        <Link to='/dashboard/user' className="flex items-center gap-2">
           <i className='bx bxs-cog'></i>
           <span>Sozlamalar</span>
         </Link>
@@ -49,7 +49,7 @@ const index = () => {
             <div className="flex items-center">
               <div className="hidden md:flex items-center gap-1 user cursor-pointer">
                 <i className="bx bxs-user-circle text-[30px]"></i>
-                <p>User Name</p>
+                <p>{localStorage.getItem('user')}</p>
               </div>
             </div>
           </Dropdown>

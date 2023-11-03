@@ -171,7 +171,7 @@ const index = () => {
         />
       </div>
       <Modal
-        title="Tahrirlash"
+        title="Kurs qo'shish"
         visible={editModalVisible}
         open={isModalOpen1}
         onOk={handleOk1}
@@ -205,7 +205,7 @@ const index = () => {
       </Modal>
 
       <Modal
-        title="Basic Modal"
+        title="Kursni tahrirlash"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
