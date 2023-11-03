@@ -8,11 +8,14 @@ const Services = () => {
     const [service, setService] = useState([]);
 
     useEffect(() => {
-        serviceApi.getAll().then((response) => {
-            console.log(response.data)
-            setService(response.data.services)
+        serviceApi.getAll().then((res) => {
+            console.log(res.data)
+            setService(res.data.services)
+        }).catch((err) => {
+            console.log(err)
         })
     }, [])
+
     return (
         <section id='services'>
             <div className='container mx-auto px-5'>

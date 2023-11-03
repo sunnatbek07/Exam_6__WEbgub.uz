@@ -63,6 +63,12 @@ const router = createBrowserRouter([
                 path: "/dashboard/xizmatlar",
                 element: <Xizmatlar />,
             },
+            // {
+            //     path:"/student/:id",
+            // },
+            // {
+            //     path:"/course?id=:id",
+            // }
         ],
     },
 ]);

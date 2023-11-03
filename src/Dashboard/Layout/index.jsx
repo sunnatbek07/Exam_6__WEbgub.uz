@@ -62,7 +62,7 @@ const index = () => {
             <li>
               <NavLink to='/dashboard/' className={"nav__link"}>
                 <i className="bx bx-home text-[24px] text-[#1b2336]"></i>
-                <p>O'quvchilar</p>
+                <p>Bosh sahifa</p>
               </NavLink>
             </li>
             <li>

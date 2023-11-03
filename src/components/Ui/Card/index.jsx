@@ -21,6 +21,7 @@ const Card = ({ state: { title, description, image, students } }) => {
     }
     function toArr(str) {
         return Array.isArray(str) ? str : [str];
+        
     }
     const MyFormItemGroup = ({ prefix, children }) => {
         const prefixPath = React.useContext(MyFormItemContext);
@@ -87,4 +88,4 @@ const Card = ({ state: { title, description, image, students } }) => {
     )
 }
 
-export default Card
+export default Card;

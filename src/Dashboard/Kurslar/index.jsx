@@ -1,34 +1,56 @@
 import React, { useEffect, useState } from "react";
-import { Table, Button, Space, Input, Modal, Form, Breadcrumb } from "antd";
+import { Table, Button, Space, Input, Modal, Form, Breadcrumb, message, Upload } from "antd";
 import { v4 as uuidv4 } from "uuid";
+import { UploadOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
-import moment from "moment";
+// import moment from "moment";
 import "./style.scss";
 import coursesApi from './../../service/courses/index';
 
+const { TextArea } = Input;
 
 const index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen1, setIsModalOpen1] = useState(false);
+
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
     coursesApi.getAll().then((res) => {
       console.log(res.data);
       setCourses(res.data.courses);
+    }).catch((err) => {
+      console.log(err)
     })
-  }, [])
+  }, []);
 
-  const data =
+  const data = courses.map((item) => {
+    const data = {
+      id: item._id,
+      name: item.title,
+      count: item.students.length,
+      time: item.createdAt,
+    }
+    return data
+  })
 
-    courses.map((item) => {
-      const data = {
-        id: item._id,
-        name: item.title,
-        count: item.students.length,
-        time: item.createdAt,
+  const [form] = Form.useForm();
+  const [fileContent, setFileContent] = useState('');
+
+  const getFileContent = (e) => {
+    if (Array.isArray(e)) {
+    } else {
+      const file = e && e.fileList && e.fileList[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          setFileContent(event.target.result);
+        };
+        reader.readAsText(file.originFileObj);
       }
-      return data
-    })
+    }
+    return e && e.fileList;
+  };
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -39,12 +61,21 @@ const index = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
-  const [order, setOrder] = useState("");
-  const [about, setAbout] = useState("");
-  const [name, setName] = useState("");
-  const [imageLink, setimageLink] = useState("");
-  const [editModalVisible, setEditModalVisible] = useState(false);
 
+  const showModal1 = () => {
+    setIsModalOpen1(true);
+  };
+  const handleOk1 = () => {
+    setIsModalOpen1(false);
+  };
+  const handleCancel1 = () => {
+    setIsModalOpen1(false);
+  };
+  const [createName, setCreateName] = useState("");
+  const [createAbout, setCreateAbout] = useState("");
+
+
+  const [editModalVisible, setEditModalVisible] = useState(false);
 
   const columns = [
     {
@@ -77,21 +108,33 @@ const index = () => {
       title: "Tahrirlash",
       key: "action",
       render: (_, record) => (
-        <Space>
-          <div className="edit">
-            <Button type="link" onClick={() => showModal()}>
-              Edit
-            </Button>
-          </div>
-          <div className="danger">
-            <Button type="link" danger>
-              Delete
-            </Button>
-          </div>
-        </Space>
+        // <Link to={`/course?id=:`}>
+        <i onClick={() => showModal()} className='bx bxs-edit text-white text-2xl bg-yellow-400 px-1 rounded-md cursor-pointer'></i>
+        // </Link>
       ),
     },
   ];
+
+  const onFinish = (values) => {
+    coursesApi.update(values, fileContent).then((res) => {
+      console.log(res)
+    }).catch((err) => {
+      console.log(err)
+    })
+  };
+
+  const onFinishCreate = (values) => {
+    const newCourse = {
+      title: createName,
+      description: createAbout
+    }
+    coursesApi.create({ newCourse, fileContent }).then((res) => {
+      console.log(createName, createAbout)
+      console.log(res)
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
 
   return (
     <div className="courses">
@@ -114,44 +157,50 @@ const index = () => {
             },
           ]}
         />
-        <button onClick={showModal}>
+        <button onClick={showModal1}>
           <i className="bx bx-plus-circle text-[32px] text-[#287c36] hover:text-[#4dff6b]"></i>
         </button>
       </div>
 
-      <Table
-        columns={columns}
-        dataSource={data}
-        pagination={false}
-        rowKey={(record) => record.about}
-      />
+      <div className="table">
+        <Table
+          columns={columns}
+          dataSource={data}
+          pagination={false}
+          rowKey={(record) => record.about}
+        />
+      </div>
       <Modal
         title="Tahrirlash"
         visible={editModalVisible}
-        onCancel={() => setEditModalVisible(false)}
+        open={isModalOpen1}
+        onOk={handleOk1}
+        onCancel={handleCancel1}
+        onCancel1={() => setEditModalVisible(false)}
       >
-        <Form layout="vertical">
-          <Form.Item label="Tartib raqami">
-            <Input value={order} onChange={(e) => setOrder(e.target.value)} />
-          </Form.Item>
-          <Form.Item label="Kurs haqida">
-            <Input value={about} onChange={(e) => setAbout(e.target.value)} />
-          </Form.Item>
-          <Form.Item label="Kurs nomi">
-            <Input value={name} onChange={(e) => setName(e.target.value)} />
-          </Form.Item>
-          <Form.Item label="Rasm linki">
-            <Input
-              value={imageLink}
-              onChange={(e) => setimageLink(e.target.value)}
-            />
-          </Form.Item>
+        <Form form={form} onFinish={onFinishCreate}>
+          <Form.Item name="image" getValueFromEvent={getFileContent} rules={[{ required: true, message: 'Please upload an image' }]}>
+            <Space direction="vertical" style={{ marginBottom: 16, width: "100%" }}>
+              <Input
+                placeholder="Kurs nomi"
+                onChange={(e) => setCreateName(e.target.value)}
+              />
 
-          <button
+              <TextArea
+                rows={4}
+                placeholder="Kurs haqida"
+                onChange={(e) => setCreateAbout(e.target.value)}
+              />
+              <Upload beforeUpload={() => false} listType="picture">
+                <Button icon={<UploadOutlined />}>Click to Upload</Button>
+              </Upload>
+            </Space>
+          </Form.Item>
+          <Button htmlType="submit" onClick={() => onFinishCreate()}
             className="px-4 py-1 rounded-[15px] border-[1px] border-[#00000034]"
           >
-            O'zgartirish
-          </button>
+            Kursni qo'shish
+          </Button>
         </Form>
       </Modal>
 
@@ -161,30 +210,30 @@ const index = () => {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <Space direction="vertical" style={{ marginBottom: 16, width: "100%" }}>
-          <Input
-            placeholder="Tartib raqami"
-            value={order}
-            onChange={(e) => setOrder(e.target.value)}
-          />
+        <Form form={form} onFinish={onFinish}>
+          <Form.Item name="image" getValueFromEvent={getFileContent} rules={[{ required: true, message: 'Please upload an image' }]}>
+            <Space direction="vertical" style={{ marginBottom: 16, width: "100%" }}>
+              <Input
+                placeholder="Kurs yangi nomi"
+                onChange={(e) => setOrder(e.target.value)}
+              />
 
-          <Input
-            placeholder="Kurs nomi"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <Input
-            placeholder="Kurs haqida"
-            value={about}
-            onChange={(e) => setAbout(e.target.value)}
-          />
-          <Input
-            placeholder="Rasm linki"
-            value={imageLink}
-            onChange={(e) => setimageLink(e.target.value)}
-          />
-          <Button>Add</Button>
-        </Space>
+              <TextArea
+                rows={4}
+                placeholder="Kurs haqida"
+                onChange={(e) => setAbout(e.target.value)}
+              />
+              <Upload beforeUpload={() => false} listType="picture">
+                <Button icon={<UploadOutlined />}>Click to Upload</Button>
+              </Upload>
+            </Space>
+          </Form.Item>
+          <Button htmlType="submit" onClick={() => onFinish()}
+            className="px-4 py-1 rounded-[15px] border-[1px] border-[#00000034]"
+          >
+            O'zgartirish
+          </Button>
+        </Form>
       </Modal>
     </div>
   );

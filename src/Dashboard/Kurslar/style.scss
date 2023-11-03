@@ -1,16 +1,19 @@
 .courses {
   overflow: visible;
-  padding: 15px 10px 40px 15px;
-  margin-bottom: 20px !important;
+  padding: 20px;
 
-  .main__up2 {
+  & .main__up2 {
     background: #ffffff;
-    margin: 30px auto;
     border-radius: 5px;
     padding: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  & .table {
+    width: 100%;
+    padding: 15px 0;
   }
 }
 

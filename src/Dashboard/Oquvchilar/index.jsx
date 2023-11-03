@@ -57,7 +57,7 @@ const index = () => {
       title: "Tahrirlash",
       dataIndex: "",
       key: "x",
-      render: () => <a className="edit" onClick={showModal}>Edit</a>,
+      render: () => <i onClick={() => showModal()} className='bx bxs-edit text-white text-2xl bg-yellow-400 px-1 rounded-md cursor-pointer'></i>,
     },
   ];
   const [isModalOpen, setIsModalOpen] = useState(false);
