@@ -3,8 +3,16 @@ import { Outlet, NavLink, Link } from "react-router-dom";
 import { Breadcrumb, Dropdown } from "antd";
 import logo from "../../assets/images/logo.svg";
 import "./style.scss";
+import userApi from "../../service/user";
 
 const index = () => {
+  useEffect(() => {
+    userApi.getMe().then((res) => {
+      localStorage.setItem("user", res.data.admin.fullName);
+    }).catch((err) => {
+      console.log(err);
+    })
+  }, [])
   const items = [
     {
       key: '1',
