@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import logo from "../../assets/images/logo.svg";
 import './style.scss';
 import { Button, Checkbox, Form, Input, message } from 'antd';
-import userApi from '../../service/User';
+import userApi from '../../service/user';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 
@@ -21,6 +21,14 @@ const SignUp = () => {
       content: 'Xatolik!',
     });
   };
+
+  useEffect(() => {
+    userApi.getMe().then((res) => {
+      localStorage.setItem("user", res.data.admin.fullName);
+    }).catch((err) => {
+      console.log(err);
+    })
+  }, [])
 
   const onFinish = (values) => {
     console.log('Success:', values);
