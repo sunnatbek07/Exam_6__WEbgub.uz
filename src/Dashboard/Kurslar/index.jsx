@@ -4,8 +4,8 @@ import { v4 as uuidv4 } from "uuid";
 import { UploadOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
 // import moment from "moment";
+import coursesApi from '../../service/courses';
 import "./style.scss";
-import coursesApi from './../../service/courses/index';
 
 const { TextArea } = Input;
 

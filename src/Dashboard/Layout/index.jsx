@@ -6,11 +6,8 @@ import "./style.scss";
 
 
 const index = () => {
-  const guard = () => {
-    localStorage.getItem('token') ? <Navigate to="/" /> : <Navigate to='/dashboard' />
-  };
+  localStorage.getItem('token') ? <Navigate to="/" /> : <Navigate to='/dashboard' />
 
-  guard();
   const items = [
     {
       key: '1',
